@@ -1,0 +1,53 @@
+import csv
+a=['ID','Name','City','Contact']
+b=[[1,'om','kailash',9998887776],[2,'sai','sirdi',8887776665],[3,'ram','ayodhya',9090909090],[4,'radhe','barsana',8908908908],[5,'krishna','vrindavan',9090890908]]
+c=[]
+for i in range(5):
+    ID=int(input("Enter ID:"))
+    Name=input("Enter Name:")
+    City=input("Enter City:")
+    Contact=int(input("Enter Contact Number:"))
+    s=[ID,Name,City,Contact]
+    c.append(s)
+
+Enter ID:6
+Enter Name:uma
+Enter City:himalaya
+Enter Contact Number:579834020
+Enter ID:7
+Enter Name:mahadev
+Enter City:kailash
+Enter Contact Number:4683892950
+Enter ID:8
+Enter Name:kartikey
+Enter City:himalaya
+Enter Contact Number:5743895093
+Enter ID:9
+Enter Name:vinayak
+Enter City:himalaya
+Enter Contact Number:2367595064
+Enter ID:10
+Enter Name:ashoksundari
+Enter City:kailash
+Enter Contact Number:3265549503
+
+with open('c:\\sqlite3\\student.csv','w',newline='') as f:
+    w=csv.writer(f)
+    w.writerow(a)
+    w.writerows(b)
+    w.writerows(c)
+with open('c:\\sqlite3\\student.csv','r') as f:
+    w=csv.reader(f)
+    for i in w:
+        print(i)
+['ID', 'Name', 'City', 'Contact']
+['1', 'om', 'kailash', '9998887776']
+['2', 'sai', 'sirdi', '8887776665']
+['3', 'ram', 'ayodhya', '9090909090']
+['4', 'radhe', 'barsana', '8908908908']
+['5', 'krishna', 'vrindavan', '9090890908']
+['6', 'uma', 'himalaya', '579834020']
+['7', 'mahadev', 'kailash', '4683892950']
+['8', 'kartikey', 'himalaya', '5743895093']
+['9', 'vinayak', 'himalaya', '2367595064']
+['10', 'ashoksundari', 'kailash', '3265549503']
